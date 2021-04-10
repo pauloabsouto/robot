@@ -1,0 +1,5 @@
+1591644800505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLCqKuc"
+1591644804162	Marionette	INFO	Listening on port 44603
+1591644804225	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591644811037	Marionette	INFO	Stopped listening on port 44603
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined

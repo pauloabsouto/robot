@@ -1,0 +1,5 @@
+1592240884458	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHn17Uh"
+1592240887950	Marionette	INFO	Listening on port 44989
+1592240887975	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+1592240897638	Marionette	INFO	Stopped listening on port 44989

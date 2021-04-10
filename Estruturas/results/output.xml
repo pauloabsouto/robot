@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200615 16:24:58.457" generator="Robot 3.2.1 (Python 2.7.17 on linux2)">
+<suite source="/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot" id="s1" name="UsandoLoops">
+<test id="s1-t1" name="Caso de teste exemplo 01">
+<kw name="Usando FOR com RANGE">
+<kw type="for" name="${COUNT} IN RANGE [ 1 | 6 ]">
+<msg timestamp="20200615 16:24:58.481" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 21: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.482" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 21: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${COUNT} = 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.483" level="INFO">Meu contador atual é: 1. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20200615 16:24:58.483" starttime="20200615 16:24:58.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.483" starttime="20200615 16:24:58.483"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.483" starttime="20200615 16:24:58.482"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.484" level="INFO">Meu contador atual é: 2. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20200615 16:24:58.484" starttime="20200615 16:24:58.483"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.484" starttime="20200615 16:24:58.484"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.484" starttime="20200615 16:24:58.483"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 3">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.484" level="INFO">Meu contador atual é: 3. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20200615 16:24:58.484" starttime="20200615 16:24:58.484"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.485" starttime="20200615 16:24:58.485"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.485" starttime="20200615 16:24:58.484"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 4">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.485" level="INFO">Meu contador atual é: 4. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20200615 16:24:58.485" starttime="20200615 16:24:58.485"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.486" starttime="20200615 16:24:58.486"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.486" starttime="20200615 16:24:58.485"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 5">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.486" level="INFO">Meu contador atual é: 5. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20200615 16:24:58.486" starttime="20200615 16:24:58.486"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.487" level="INFO">Acabou o loop!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.487" starttime="20200615 16:24:58.487"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.487" starttime="20200615 16:24:58.486"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.487" starttime="20200615 16:24:58.486"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.487" starttime="20200615 16:24:58.481"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.487" starttime="20200615 16:24:58.481"></status>
+</kw>
+<kw name="Usando FOR com LISTA">
+<kw type="for" name="${ITEM} IN [ @{FRUTAS} ]">
+<msg timestamp="20200615 16:24:58.488" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 26: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.488" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 26: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${ITEM} = maça">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.489" level="INFO">Minha fruta é: maça</msg>
+<status status="PASS" endtime="20200615 16:24:58.489" starttime="20200615 16:24:58.488"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.489" starttime="20200615 16:24:58.489"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.489" starttime="20200615 16:24:58.488"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = banana">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.489" level="INFO">Minha fruta é: banana</msg>
+<status status="PASS" endtime="20200615 16:24:58.490" starttime="20200615 16:24:58.489"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.490" starttime="20200615 16:24:58.490"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.490" starttime="20200615 16:24:58.489"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = uva">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.490" level="INFO">Minha fruta é: uva</msg>
+<status status="PASS" endtime="20200615 16:24:58.490" starttime="20200615 16:24:58.490"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.491" starttime="20200615 16:24:58.491"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.491" starttime="20200615 16:24:58.490"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = abacaxi">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.491" level="INFO">Minha fruta é: abacaxi</msg>
+<status status="PASS" endtime="20200615 16:24:58.491" starttime="20200615 16:24:58.491"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.492" level="INFO">Acabou o loop!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.492" starttime="20200615 16:24:58.492"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.492" starttime="20200615 16:24:58.491"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.492" starttime="20200615 16:24:58.491"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.492" starttime="20200615 16:24:58.488"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.492" starttime="20200615 16:24:58.487"></status>
+</kw>
+<kw name="Saindo de um FOR">
+<kw type="for" name="${ITEM} IN [ @{FRUTAS} ]">
+<msg timestamp="20200615 16:24:58.493" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 31: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.493" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 31: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${ITEM} = maça">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.494" starttime="20200615 16:24:58.493"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.494" level="INFO">Minha fruta é: maça</msg>
+<status status="PASS" endtime="20200615 16:24:58.494" starttime="20200615 16:24:58.494"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.494" starttime="20200615 16:24:58.493"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = banana">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<status status="PASS" endtime="20200615 16:24:58.495" starttime="20200615 16:24:58.494"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.495" level="INFO">Minha fruta é: banana</msg>
+<status status="PASS" endtime="20200615 16:24:58.495" starttime="20200615 16:24:58.495"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.495" starttime="20200615 16:24:58.494"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = uva">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.496" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20200615 16:24:58.496" starttime="20200615 16:24:58.495"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.496" starttime="20200615 16:24:58.495"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.496" starttime="20200615 16:24:58.493"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.496" starttime="20200615 16:24:58.492"></status>
+</kw>
+<kw name="Usando a keyword REPEAT">
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>4</arg>
+<arg>Log</arg>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.496" level="INFO">Repeating keyword, round 1/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.497" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.497" starttime="20200615 16:24:58.497"></status>
+</kw>
+<msg timestamp="20200615 16:24:58.497" level="INFO">Repeating keyword, round 2/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.497" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.497" starttime="20200615 16:24:58.497"></status>
+</kw>
+<msg timestamp="20200615 16:24:58.497" level="INFO">Repeating keyword, round 3/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.498" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.498" starttime="20200615 16:24:58.497"></status>
+</kw>
+<msg timestamp="20200615 16:24:58.498" level="INFO">Repeating keyword, round 4/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20200615 16:24:58.498" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20200615 16:24:58.498" starttime="20200615 16:24:58.498"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.498" starttime="20200615 16:24:58.496"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.498" starttime="20200615 16:24:58.496"></status>
+</kw>
+<status status="PASS" endtime="20200615 16:24:58.498" critical="yes" starttime="20200615 16:24:58.481"></status>
+</test>
+<doc>Suíte para exemplificar o uso de LOOPS nos testes
+Os LOOPS devem ser pouco utilizados, mas tem hora que não tem jeito
+e precisamos dele mesmo, então vamos ver como é!
+LOOPS: use com moderação!
+Infelizmente o Loop FOR ainda não tem uma estrutura keyword-driven
+Mas o criador do Robot já disse que estão estudando uma solução!</doc>
+<status status="PASS" endtime="20200615 16:24:58.499" starttime="20200615 16:24:58.459"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="UsandoLoops" pass="1">UsandoLoops</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200615 16:24:58.481" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 21: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.482" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 21: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200615 16:24:58.488" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 26: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.488" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 26: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200615 16:24:58.493" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 31: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200615 16:24:58.493" level="WARN">Error in file '/home/pauloasouto/workspace/robot/Estruturas/UsandoLoops.robot' in FOR loop starting on line 31: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+</errors>
+</robot>

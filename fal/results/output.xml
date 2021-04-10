@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200629 09:42:40.238" generator="Robot 3.2.1 (Python 2.7.17 on linux2)">
+<suite source="/home/pauloasouto/workspace/robot/fal/InterfaceFALTests.robot" id="s1" name="InterfaceFALTests">
+<kw type="setup" name="Conectar a minha Interface" library="Resource">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>fakeInterface</arg>
+<arg>${URL_API}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:40.352" level="INFO">Creating Session using : alias=fakeInterface, url=http://localhost:8080/test/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20200629 09:42:40.353" starttime="20200629 09:42:40.352"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:40.353" starttime="20200629 09:42:40.351"></status>
+</kw>
+<test id="s1-t1" name="Verificar email válido">
+<kw name="Validar o email &quot;email@robot.com&quot;" library="Resource">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>fakeInterface</arg>
+<arg>isValidEmail?email=${EMAIL}</arg>
+</arguments>
+<assign>
+<var>${RESPOSTA}</var>
+</assign>
+<msg timestamp="20200629 09:42:40.364" level="INFO">GET Request : url=http://localhost:8080/test//isValidEmail?email=email@robot.com 
+ path_url=/test//isValidEmail?email=email@robot.com 
+ headers={'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'python-requests/2.23.0'} 
+ body=None 
+ </msg>
+<msg timestamp="20200629 09:42:40.364" level="INFO">GET Response : url=http://localhost:8080/test//isValidEmail?email=email@robot.com 
+ status=200, reason= 
+ body=true 
+ </msg>
+<msg timestamp="20200629 09:42:40.364" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:40.364" starttime="20200629 09:42:40.354"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:40.365" level="INFO">true</msg>
+<status status="PASS" endtime="20200629 09:42:40.365" starttime="20200629 09:42:40.364"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPOSTA}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:40.366" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:40.367" starttime="20200629 09:42:40.365"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:40.367" starttime="20200629 09:42:40.354"></status>
+</kw>
+<kw name="Conferir informação" library="Resource">
+<arguments>
+<arg>true</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+<arg>${STATUS_DESEJADO}</arg>
+</arguments>
+<status status="PASS" endtime="20200629 09:42:40.368" starttime="20200629 09:42:40.368"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:40.368" starttime="20200629 09:42:40.367"></status>
+</kw>
+<timeout value="1 second"></timeout>
+<status status="PASS" endtime="20200629 09:42:40.369" critical="yes" starttime="20200629 09:42:40.353"></status>
+</test>
+<test id="s1-t2" name="Verificar email inválido">
+<kw name="Validar o email &quot;emailrobot.com&quot;" library="Resource">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>fakeInterface</arg>
+<arg>isValidEmail?email=${EMAIL}</arg>
+</arguments>
+<assign>
+<var>${RESPOSTA}</var>
+</assign>
+<msg timestamp="20200629 09:42:40.377" level="INFO">GET Request : url=http://localhost:8080/test//isValidEmail?email=emailrobot.com 
+ path_url=/test//isValidEmail?email=emailrobot.com 
+ headers={'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'python-requests/2.23.0'} 
+ body=None 
+ </msg>
+<msg timestamp="20200629 09:42:40.378" level="INFO">GET Response : url=http://localhost:8080/test//isValidEmail?email=emailrobot.com 
+ status=200, reason= 
+ body=false 
+ </msg>
+<msg timestamp="20200629 09:42:40.378" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:40.379" starttime="20200629 09:42:40.370"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:40.380" level="INFO">false</msg>
+<status status="PASS" endtime="20200629 09:42:40.381" starttime="20200629 09:42:40.379"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPOSTA}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:40.384" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:40.385" starttime="20200629 09:42:40.382"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:40.385" starttime="20200629 09:42:40.370"></status>
+</kw>
+<kw name="Conferir informação" library="Resource">
+<arguments>
+<arg>false</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+<arg>${STATUS_DESEJADO}</arg>
+</arguments>
+<status status="PASS" endtime="20200629 09:42:40.389" starttime="20200629 09:42:40.389"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:40.390" starttime="20200629 09:42:40.386"></status>
+</kw>
+<timeout value="1 second"></timeout>
+<status status="PASS" endtime="20200629 09:42:40.390" critical="yes" starttime="20200629 09:42:40.369"></status>
+</test>
+<test id="s1-t3" name="Verificar se o bluetooth está ativado">
+<kw name="Requisitar a função &quot;FAL_BluetoothHCITxReady&quot;" library="Resource">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>fakeInterface</arg>
+<arg>${FUNCAO}</arg>
+</arguments>
+<assign>
+<var>${RESPOSTA}</var>
+</assign>
+<msg timestamp="20200629 09:42:41.393" level="FAIL">Test timeout 1 second exceeded.</msg>
+<status status="FAIL" endtime="20200629 09:42:41.393" starttime="20200629 09:42:40.394"></status>
+</kw>
+<status status="FAIL" endtime="20200629 09:42:41.394" starttime="20200629 09:42:40.393"></status>
+</kw>
+<timeout value="1 second"></timeout>
+<status status="FAIL" endtime="20200629 09:42:41.395" critical="yes" starttime="20200629 09:42:40.390">Test timeout 1 second exceeded.</status>
+</test>
+<test id="s1-t4" name="Recuperar informações da FAL">
+<kw name="Recuperar informação da função com id &quot;51&quot;" library="Resource">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>fakeInterface</arg>
+<arg>FAL_GetSystemInfo?id=${ID}</arg>
+</arguments>
+<assign>
+<var>${RESPOSTA}</var>
+</assign>
+<msg timestamp="20200629 09:42:41.414" level="INFO">GET Request : url=http://localhost:8080/test//FAL_GetSystemInfo?id=51 
+ path_url=/test//FAL_GetSystemInfo?id=51 
+ headers={'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'python-requests/2.23.0'} 
+ body=None 
+ </msg>
+<msg timestamp="20200629 09:42:41.415" level="INFO">GET Response : url=http://localhost:8080/test//FAL_GetSystemInfo?id=51 
+ status=200, reason= 
+ body=FAL-51 
+ </msg>
+<msg timestamp="20200629 09:42:41.416" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:41.416" starttime="20200629 09:42:41.401"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:41.418" level="INFO">FAL-51</msg>
+<status status="PASS" endtime="20200629 09:42:41.418" starttime="20200629 09:42:41.416"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${RESPOSTA}</arg>
+</arguments>
+<msg timestamp="20200629 09:42:41.419" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20200629 09:42:41.420" starttime="20200629 09:42:41.418"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:41.420" starttime="20200629 09:42:41.399"></status>
+</kw>
+<kw name="Conferir informação" library="Resource">
+<arguments>
+<arg>FAL-51</arg>
+</arguments>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${RESPOSTA.text}</arg>
+<arg>${STATUS_DESEJADO}</arg>
+</arguments>
+<status status="PASS" endtime="20200629 09:42:41.422" starttime="20200629 09:42:41.421"></status>
+</kw>
+<status status="PASS" endtime="20200629 09:42:41.422" starttime="20200629 09:42:41.420"></status>
+</kw>
+<timeout value="1 second"></timeout>
+<status status="PASS" endtime="20200629 09:42:41.423" critical="yes" starttime="20200629 09:42:41.397"></status>
+</test>
+<status status="FAIL" endtime="20200629 09:42:41.424" starttime="20200629 09:42:40.240"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="InterfaceFALTests" pass="3">InterfaceFALTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

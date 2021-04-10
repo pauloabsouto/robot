@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200615 15:04:18.962" generator="Robot 3.2.1 (Python 2.7.17 on linux2)">
+<suite source="/home/pauloasouto/workspace/robot/Variaveis/RandomEmailGenerator.robot" id="s1" name="RandomEmailGenerator">
+<test id="s1-t1" name="Test Case 01">
+<kw name="Return custom email">
+<arguments>
+<arg>${CLIENT.name}</arg>
+<arg>${CLIENT.last_name}</arg>
+</arguments>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<assign>
+<var>${RANDOM_STRING}</var>
+</assign>
+<msg timestamp="20200615 15:04:18.987" level="INFO">${RANDOM_STRING} = 5daqPusC</msg>
+<status status="PASS" endtime="20200615 15:04:18.987" starttime="20200615 15:04:18.986"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${USER_NAME}${USER_LAST_NAME}${RANDOM_STRING}@testerobot.com</arg>
+</arguments>
+<assign>
+<var>${EMAIL}</var>
+</assign>
+<msg timestamp="20200615 15:04:18.987" level="INFO">${EMAIL} = JohnDoe5daqPusC@testerobot.com</msg>
+<status status="PASS" endtime="20200615 15:04:18.987" starttime="20200615 15:04:18.987"></status>
+</kw>
+<status status="PASS" endtime="20200615 15:04:18.987" starttime="20200615 15:04:18.985"></status>
+</kw>
+<status status="PASS" endtime="20200615 15:04:18.988" critical="yes" starttime="20200615 15:04:18.985"></status>
+</test>
+<doc>Random Email Generator</doc>
+<status status="PASS" endtime="20200615 15:04:18.988" starttime="20200615 15:04:18.963"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="RandomEmailGenerator" pass="1">RandomEmailGenerator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
